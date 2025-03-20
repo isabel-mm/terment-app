@@ -6,7 +6,10 @@ from io import StringIO
 # Carga del modelo entrenado
 @st.cache_resource
 def load_model():
-    return spacy.load('model-last')
+    try:
+        return spacy.load('model-last')
+    except:
+        st.error("El modelo no se pudo cargar. Asegúrate de que la carpeta 'model-last' está presente.")
 
 nlp = load_model()
 
