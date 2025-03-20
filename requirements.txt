@@ -1,5 +1,6 @@
 streamlit
 spacy
+spacy[transformers]
 en-core-web-lg
 pygments==2.19.1
 mdurl==0.1.2
