@@ -7,7 +7,7 @@ from io import StringIO
 @st.cache_resource
 def load_model():
     try:
-        return spacy.load('model-last')
+        return spacy.load('model-best')
     except:
         st.error("El modelo no se pudo cargar. Asegúrate de que la carpeta 'model-last' está presente.")
 
